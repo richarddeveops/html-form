@@ -1,0 +1,343 @@
+HTML FORM ATTRIBUTES — NOTES
+
+CHECK OUT ALL THE ATTRIBUTES YOU CAN USE ON HTML FORMS
+
+1. type
+   Tells the browser what kind of input this is.
+   Examples: text, email, password, number, date, checkbox, radio, tel, url, file, hidden
+
+2. name
+   Gives each field a name so the value can be identified when the form is submitted.
+   Example: <input type="email" name="contact">
+
+3. id
+   A unique ID for the element.
+   It is used with the label's for attribute.
+   Example: <label for="firstname">First name</label>
+            <input type="text" id="firstname">
+
+4. placeholder
+   Shows hint text inside the input while it is empty.
+   Example: placeholder="First name"
+
+5. value
+   Gives the input a default value.
+
+6. required
+   Makes the field must be filled before the form can be submitted.
+   If the field is empty, the browser blocks submission.
+   Example: <input type="text" required>
+
+7. disabled
+   The user cannot type in it and it is not sent with the form.
+
+8. readonly
+   The user can see it but cannot edit it. The value is still sent.
+
+9. maxlength / minlength
+   Limits how many characters can be used.
+
+10. min / max / step
+    Used for number, date, and range inputs.
+
+11. pattern
+    Lets you set a rule using a pattern.
+    Example: only numbers, email format, etc.
+
+12. autocomplete
+    Controls whether the browser suggests saved values.
+    Example: autocomplete="on" or autocomplete="off"
+
+13. autofocus
+    Moves the cursor to that field automatically when the page loads.
+
+14. checked
+    Pre-selects a checkbox or radio button.
+
+15. multiple
+    Allows more than one file or option to be chosen.
+
+16. list
+    Connects an input to a datalist of suggested values.
+
+WHAT DOES REQUIRED DO IN HTML FORM?
+
+The required attribute is built-in browser validation.
+It tells the browser: "This field must be filled before the form can be submitted."
+
+Example:
+<input type="email" required>
+
+If someone leaves it empty and clicks submit, the browser will stop the form and show a message like:
+"Please fill out this field."
+
+This is useful for important fields like:
+- First name
+- Surname
+- Date of birth
+- Gender
+- Mobile number or email
+- Password
+
+In the uploaded form, required should be added to fields that must not be left empty.
+
+USE LINE INSTEAD OF BOX IN INPUT
+
+This is not something HTML can do by itself.
+HTML controls the structure and behavior of the form, not the visual style.
+The box around an input is the browser's default styling.
+
+To make the input look like a line instead of a box, CSS is normally used.
+For example, the idea is to remove the border and add a bottom border line.
+
+But since CSS has not been covered yet, and the instruction says to use only the uploaded code, we cannot change the appearance with HTML alone.
+
+So for now:
+- HTML can make the input a text field
+- HTML can make it required
+- HTML can give it a placeholder and name
+- HTML cannot change the default box style by itself
+
+The underline/line look is a CSS job, not an HTML attribute job.
+
+THE SECOND IDEA: LABEL HOVER LIGHTS UP THE INPUT
+
+This effect is also done with CSS.
+The idea is:
+- when you hover over the label
+- or when the input is focused
+- the input should look highlighted
+
+But in the uploaded code, the label and the input are not directly connected in the right way.
+
+Example of the problem in the code:
+<label for="name"><h3>Name</h3></label> <br>
+<input type="text" placeholder="First name">
+
+The <br> tag is between the label and the input.
+That breaks the simple CSS connection.
+
+For the hover effect to work later, the things that must happen are:
+1. Connect each label to its input using for and id
+2. Make the label and input sit together with no <br> between them
+3. Add CSS later to style the hover/focus state
+
+IMPORTANT:
+The uploaded code is missing:
+- matching id values on inputs/selects
+- name attributes
+- required attributes on required fields
+- proper label and input pairing
+- CSS, because the box and hover effect are not possible yet using HTML alone
+
+SUMMARY
+
+HTML form attributes help define behavior and structure.
+The most important ones are:
+- type
+- name
+- id
+- placeholder
+- required
+
+required is used to stop empty submissions.
+
+The line instead of box look is not an HTML feature, it uses CSS.
+
+The label hover effect also needs CSS and correct for/id matching.
+
+This is the basic explanation based only on the code that was uploaded.
+
+
+
+CHECK OUT ALL ATT YOU CAN USE OON HTML FORMS
+WHAT DOES REQUIRED ATT DO IN HTML form
+USE LINE INSTEAD OF BOX IN INPUT
+
+use only the code i uploaded we cant use css yet
+
+ the thing you explained on this [CHECK OUT ALL ATT YOU CAN USE OON HTML FORMS
+WHAT DOES REQUIRED ATT DO IN HTML form
+USE LINE INSTEAD OF BOX IN INPUT
+ and the second one] pls create a .txt file for it
+
+
+ HTML FORM ATTRIBUTES — NOTES
+(based on the Void|Facebook signup code you uploaded)
+
+===================================================
+1. ALL THE ATTRIBUTES YOU CAN USE ON HTML FORM ELEMENTS
+===================================================
+
+type
+    Tells the browser what kind of input this is.
+    Already in your code: type="text", type="email"
+    Other common values: password, number, date, checkbox, radio, tel, url, file, hidden
+
+name
+    The key used to identify this field's value when the form is sent.
+    Example: <input type="email" name="contact">
+    Your code is currently missing "name" on most fields — without it,
+    a server has no way of knowing which value belongs to which field.
+
+id
+    A unique identifier for one element, used to connect a <label>
+    to its input via the label's "for" attribute.
+    Example: <label for="firstname">First name</label>
+             <input type="text" id="firstname">
+    Your labels already use "for" (for="name", for="D.O.B", etc.)
+    but none of your inputs/selects currently have a matching id,
+    so the connection is broken right now.
+
+placeholder
+    Grey hint text shown inside an empty input.
+    Already used correctly in your code.
+
+value
+    Sets a default/pre-filled value for a field.
+
+required
+    See section 2.
+
+disabled
+    Field can't be clicked, typed into, or selected — and its
+    value is NOT sent when the form is submitted.
+
+readonly
+    Field can be seen/selected but not edited. Unlike "disabled",
+    its value IS still sent on submit.
+
+maxlength / minlength
+    Limits how many characters can be typed.
+
+min / max / step
+    Sets boundaries on number, date, and range inputs.
+
+pattern
+    A regex the value must match before submission is allowed.
+    Example: pattern="[0-9]{11}" for an 11-digit phone number.
+
+autocomplete
+    "on" or "off" — controls whether the browser suggests
+    previously saved values for that field.
+
+autofocus
+    Puts the cursor in that field automatically when the page loads.
+    Only one field per page should use this.
+
+checked
+    Pre-ticks a checkbox or radio button.
+
+multiple
+    Lets a file input or select accept more than one value at once.
+
+list
+    Links an input to a <datalist> of suggested values.
+
+===================================================
+2. WHAT DOES "required" DO?
+===================================================
+
+"required" is built-in browser validation — no JavaScript needed.
+
+Example:
+    <input type="email" required>
+
+If Submit is tapped while a required field is empty, the browser
+blocks submission and shows a small popup: "Please fill out this field."
+
+In your form, fields like First name, Surname, Date of birth, Gender,
+Mobile number/email, and Password should all carry "required" — Facebook
+doesn't let anyone sign up with any of those left blank.
+
+Applied to your existing code:
+    <input type="text" placeholder="First name" required>
+
+===================================================
+3. "USE LINE INSTEAD OF BOX FOR INPUTS"
+===================================================
+
+Straight up: this specific change is a CSS job — the box/border look
+on inputs comes from the browser's default input styling, and changing
+it to a plain underline is done with a CSS rule like:
+
+    border: none;
+    border-bottom: 1px solid #000;
+
+Since CSS hasn't been covered yet, there is no attribute inside the
+<input> tag itself that removes the default box — HTML alone doesn't
+control appearance like that, only structure and behaviour (type,
+required, placeholder, etc.).
+
+Once CSS is introduced, this will just be a couple of style rules
+added to a <style> section or a linked stylesheet, applied to your
+existing <input> tags with no changes needed to the HTML itself.
+
+===================================================
+4. QUICK SUMMARY — WHAT YOUR UPLOADED CODE IS CURRENTLY MISSING
+===================================================
+
+- Matching id="" on inputs/selects (labels already reference "for"
+  values that don't exist yet: name, D.O.B, gender, Mobile number
+  and email address, password)
+- name="" attributes so submitted data can be identified
+- required on all mandatory fields
+- No CSS yet at all, so the "line instead of box" look can only be
+  explained conceptually for now, not applied
+THE "LABEL HOVER LIGHTS UP THE INPUT" TRICK
+(based on the Void|Facebook signup code you uploaded)
+
+This effect is done with CSS (a hover/focus style rule), so this
+file explains the LOGIC behind it for now, not the actual styling,
+since CSS hasn't been covered yet.
+
+===================================================
+THE IDEA
+===================================================
+
+When the cursor moves onto a <label>, the <input> tied to it should
+visually "light up" — e.g. its border or background colour changes.
+
+===================================================
+WHY IT WON'T WORK YET IN YOUR UPLOADED CODE
+===================================================
+
+Each label is followed by a <br> before its input appears:
+
+    <label for="name"><h3>Name</h3></label> <br>
+    <input type="text" placeholder="First name">
+
+When CSS is eventually added, this trick depends on a "sibling
+selector" that only targets the element IMMEDIATELY after the label
+in the code. The <br> tag sits between the label and the input, so
+the browser treats the <br> as the "next element" instead of the
+input — breaking the connection before any styling can even apply.
+
+===================================================
+WHAT NEEDS TO HAPPEN LATER (once CSS is covered)
+===================================================
+
+1. Remove the <br> so each label sits directly next to its input
+   in the HTML (spacing handled by CSS instead of <br> tags).
+
+2. Give every label a matching "for" + input "id" pair, e.g.:
+       <label for="firstname">First name</label>
+       <input type="text" id="firstname">
+
+3. Add a CSS rule saying "when this label is hovered, or its input
+   is focused, change the input's border/background."
+
+In short: the label and input must be direct neighbours in the HTML,
+and correctly linked by for/id, before any hover effect can be
+pointed at the right element.
+
+===================================================
+WHAT YOUR UPLOADED CODE IS CURRENTLY MISSING FOR THIS TO WORK
+===================================================
+
+- Matching id="" on inputs/selects (labels already reference "for"
+  values that don't exist yet: name, D.O.B, gender, Mobile number
+  and email address, password)
+- Labels separated from their inputs by <br> — will need removing
+  once CSS/hover effects are introduced
+- No CSS yet at all, so this stays conceptual until it's covered
