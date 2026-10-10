@@ -1,0 +1,7 @@
+HTML FORMS
+
+Forms collect information using controls such as <input>, <select>, and <button>. The type attribute chooses an input's behavior, for example text, email, date, or password. Give each submitted control a name, and connect every <label for="..."> to the matching unique input id.
+
+The required attribute asks the browser to check that a value is supplied before submission. Input types such as email also provide basic built-in validation. Placeholder text is only a hint; it does not replace a label.
+
+A form's action identifies where submitted data goes and method specifies how it is sent. This practice page has no server, so it demonstrates form structure and browser validation rather than storing information. CSS changes how controls look; JavaScript or a server is needed for additional behavior.

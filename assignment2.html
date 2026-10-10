@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html>
     <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../lesson.css">
         <title>Form Example</title>
 </head>
 <body>
-  <form>
-    <label for="name" >Name</label> <br>
-    <input type="text" id="name" placeholder="Enter your name" required style="border: none; border-bottom:2px solid black;"><br> <br>
-
-    <label for="email" >Email</label><br>
-    <input type="email" id="email" placeholder="Enter your email" required style="border: none; border-bottom:2px solid black;">
-
-    <br> <br> <br>
-    <label for="email" >Email</label>
-    <input type="email" id="email" placeholder="email" required style="border: none; border-bottom:2px solid black;">
-
-    <label for="email">email</label>
-    <input type="email" placeholder="email" id="email">
-  </form>
-  <!-- CHECK OUT ALL ATT YOU CAN USE ON HTML FORMS
-  WHAT DOES REQUIRED ATT DO IN HTML form
-  how to USE LINE INSTEAD OF BOX IN INPUT
-  -->
+      <main>
+        <h1>Form Example</h1>
+        <form action="#" method="get">
+          <p>
+            <label for="name">Name</label><br>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required autocomplete="name">
+          </p>
+          <p>
+            <label for="email">Email</label><br>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required autocomplete="email">
+          </p>
+          <p>
+            <label for="password">Password</label><br>
+            <input type="password" id="password" name="password" placeholder="Enter a password" required autocomplete="new-password">
+          </p>
+          <button type="submit">Submit</button>
+        </form>
+      </main>
 </body>
 </html>

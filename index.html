@@ -1,55 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+        <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form</title>
+        <link rel="stylesheet" href="../lesson.css">
+        <title>HTML Forms</title>
 </head>
-<body style="text-align: center;">
-    <h1>Good Morning everyone!</h1>
-    <form>
-        <label for="firstName">First name</label> <br>
-        <input type="text"><br>
-<br>
-        <label for="lastName">Last name</label>
-        <input type="text"><br>
-<br>
-        <label for="date_of_birth">D.O.B</label>
-        <input type="date" placeholder="D.O.B"> <br>
-<br><br>
-<label for="email">Enter Email Address</label><br>
-        <input type="email" placeholder="Email"> <br><br>
-        <!--  <label for="gender">Male</label>
-        <input type="checkbox" placeholder="gender">
-        <label for="gender">Female</label>
-        <input type="checkbox" placeholder="gender">  -->
-         
-        <label for="email">Enter Email Address</label><br>
-        <input type="email" placeholder="Email"> <br><br>
-
-        <label for="gender">Male</label>
-        <input type="checkbox" placeholder="gender">
-        <label for="gender">Female</label>
-        <input type="checkbox" placeholder="gender">
-        <br><br>
-  <input type="range">
-
-
-  <h3>State or origin</h3>
-  <select>
-    <option value="">Oyo</option>
-    <option value="">Lagos</option>
-    <option value="">Osun</option>
-    <option value="">Ogun</option>
-    <option value="">Ondo</option>
-    <option value="">Ekiti</option>
-    <option value="">Kwara</option>
-  </select>
-    </form>
-
-     <p><a href="lesson-summary.txt">What I learned</a></p>
-    
-    <p> <a href="assignment2.html">Our Assignment_2</a></p>
-    <p> <a href="assignment.html">The assignment given to us</a></p>
+<body>
+        <p><a href="../index.html">All lessons</a></p>
+        <header>
+                <h1>HTML Forms</h1>
+                <p>Use labels and input types to collect information clearly.</p>
+        </header>
+        <main>
+                <form action="#" method="get">
+                        <p>
+                                <label for="first-name">First name</label><br>
+                                <input type="text" id="first-name" name="first-name" autocomplete="given-name" required>
+                        </p>
+                        <p>
+                                <label for="last-name">Last name</label><br>
+                                <input type="text" id="last-name" name="last-name" autocomplete="family-name" required>
+                        </p>
+                        <p>
+                                <label for="date-of-birth">Date of birth</label><br>
+                                <input type="date" id="date-of-birth" name="date-of-birth">
+                        </p>
+                        <p>
+                                <label for="email">Email address</label><br>
+                                <input type="email" id="email" name="email" autocomplete="email" required>
+                        </p>
+                        <p>
+                                <label for="gender">Gender</label><br>
+                                <select id="gender" name="gender">
+                                        <option value="">Choose an option</option>
+                                        <option value="female">Female</option>
+                                        <option value="male">Male</option>
+                                        <option value="prefer-not-to-say">Prefer not to say</option>
+                                </select>
+                        </p>
+                        <p>
+                                <label for="state">State of origin</label><br>
+                                <select id="state" name="state">
+                                        <option value="">Choose a state</option>
+                                        <option value="oyo">Oyo</option>
+                                        <option value="lagos">Lagos</option>
+                                        <option value="osun">Osun</option>
+                                        <option value="ogun">Ogun</option>
+                                        <option value="ondo">Ondo</option>
+                                        <option value="ekiti">Ekiti</option>
+                                        <option value="kwara">Kwara</option>
+                                </select>
+                        </p>
+                        <button type="submit">Submit</button>
+                </form>
+                <nav aria-label="Form lesson links">
+                        <p><a href="lesson-summary.txt">What I learned</a></p>
+                        <p><a href="assignment2.html">Form assignment</a></p>
+                        <p><a href="assignment.html">Signup form example</a></p>
+                </nav>
+        </main>
 </body>
 </html>
