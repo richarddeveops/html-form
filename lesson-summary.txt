@@ -5,3 +5,5 @@ Forms collect information using controls such as <input>, <select>, and <button>
 The required attribute asks the browser to check that a value is supplied before submission. Input types such as email also provide basic built-in validation. Placeholder text is only a hint; it does not replace a label.
 
 A form's action identifies where submitted data goes and method specifies how it is sent. This practice page has no server, so it demonstrates form structure and browser validation rather than storing information. CSS changes how controls look; JavaScript or a server is needed for additional behavior.
+
+The form exercises use CSS to make text fields look like underlined inputs and highlight them on hover or focus. A small JavaScript example shows a confirmation in the page; the example does not send or store form information.
